@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A3D5D"
+    android:padding="16dp">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Pregunta principal -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cómo te sientes hoy?"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Escala de emociones -->
+    <LinearLayout
+        android:id="@+id/emotion_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <!-- Emociones -->
+        <ImageView
+            android:id="@+id/emotion_angry"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/enojado"
+            android:contentDescription="Muy enojado"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/emotion_sad"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/triste"
+            android:contentDescription="Molesto"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/emotion_neutral"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/neutral"
+            android:contentDescription="Neutral"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/emotion_happy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/feliz"
+            android:contentDescription="Feliz"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/emotion_very_happy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/maravilloso"
+            android:contentDescription="Muy Feliz!"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <!-- Palabras clave relacionadas -->
+    <LinearLayout
+        android:id="@+id/keywords_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/emotion_scale"
+        android:visibility="gone"
+        android:layout_marginTop="10dp" />
+
+    <!-- Campo de comentarios -->
+    <EditText
+        android:id="@+id/comment_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe un comentario (opcional)"
+        android:layout_below="@id/keywords_section"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_background"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#808080" />
+
+    <!-- Recordatorio de pastillas -->
+    <LinearLayout
+        android:id="@+id/remind_medication_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/comment_box"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="#5499C7"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pastilla"
+            android:contentDescription="Recordatorio de pastilla"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuidaste de ti mismo hoy?"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/remind_medication_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- Botón Guardar -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remind_medication_section"
+        android:layout_marginTop="20dp"
+        android:text="Guardar"
+        android:backgroundTint="#d4a017"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

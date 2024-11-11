@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título del Modal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un Psicólogo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- Lista de psicólogos -->
+    <RecyclerView
+        android:id="@+id/psychologist_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Mensaje cuando no hay psicólogos disponibles -->
+    <TextView
+        android:id="@+id/no_psychologists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No se encontraron psicólogos disponibles."
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="8dp" />
+
+    <!-- Seleccionar Psicólogo y Fecha de Cita -->
+    <TextView
+        android:id="@+id/select_date_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la fecha de la cita"
+        android:visibility="gone"
+        android:padding="8dp" />
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Horarios Disponibles -->
+    <RecyclerView
+        android:id="@+id/time_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campos adicionales (Ubicación y Comentarios) -->
+    <EditText
+        android:id="@+id/location_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ubicación (Consultorio, Sala, etc.)"
+        android:visibility="gone"
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/comments_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comentarios (opcional)"
+        android:visibility="gone"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para aceptar la cita -->
+    <Button
+        android:id="@+id/accept_appointment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aceptar Cita"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <!-- Mensaje de éxito -->
+    <TextView
+        android:id="@+id/success_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Cita tomada exitosamente!"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

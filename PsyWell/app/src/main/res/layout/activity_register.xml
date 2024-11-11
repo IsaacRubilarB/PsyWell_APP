@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#1A3D5D">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo de la aplicación -->
+        <ImageView
+            android:id="@+id/registerLogo"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo de PsyWell"
+            android:layout_gravity="center" />
+
+        <!-- Campo para Nombre -->
+        <EditText
+            android:id="@+id/nombreEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F7F7F8" />
+
+        <!-- Campo para Correo Electrónico -->
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- Campo para Fecha de Nacimiento -->
+        <EditText
+            android:id="@+id/fechaNacimientoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento (DD-MM-YYYY)"
+            android:inputType="date"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- Campo para Género -->
+        <Spinner
+            android:id="@+id/generoSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/genero_options" />
+
+
+        <!-- Campo para Contraseña -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- Campo para Confirmar Contraseña -->
+        <EditText
+            android:id="@+id/confirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- Botón para Registrar -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear Cuenta"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#8BC34A"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

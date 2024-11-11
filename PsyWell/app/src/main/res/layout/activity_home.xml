@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#1A3D5D">
+
+    <!-- Encabezado de Información del Paciente -->
+    <LinearLayout
+        android:id="@+id/patient_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#BB9F25"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true">
+
+        <!-- Avatar del Paciente -->
+        <ImageView
+            android:id="@+id/patient_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/avatar_placeholder"
+            android:contentDescription="@string/avatar_content_desc"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_background" />
+
+        <!-- Nombre e información del paciente -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_name"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patient_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_email"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sección de Citas -->
+    <TextView
+        android:id="@+id/section_title_citas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section_title_citas"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/patient_info"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_citas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_title_citas"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Sección de Datos Fisiológicos -->
+    <TextView
+        android:id="@+id/section_title_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section_title_data"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/recycler_citas"
+        android:layout_marginBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/data_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_title_data"
+        android:columnCount="2"
+        android:gap="16dp">
+
+        <!-- Card para BPM -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/data_card_background"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/bpm"
+                android:contentDescription="@string/bpm_desc" />
+            <TextView
+                android:text="@string/bpm"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"  android:layout_height="50dp" android:layout_width="50dp"/>
+            <TextView
+                android:id="@+id/bpm_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="72"
+                android:textSize="20sp"
+                android:textColor="#BB9F25"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card para Horas de Sueño -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/data_card_background"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/sleep"
+                android:contentDescription="@string/sleep_desc" />
+            <TextView
+                android:text="@string/sleep_hours"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/sleep_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.5"
+                android:textSize="20sp"
+                android:textColor="#BB9F25"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card para Vasos de Agua -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/data_card_background"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/agua"
+                android:contentDescription="@string/water_desc" />
+            <TextView
+                android:text="@string/water_glasses"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/water_glasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="20sp"
+                android:textColor="#BB9F25"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card para Nivel de Estrés -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/data_card_background"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/stress"
+                android:contentDescription="@string/stress_desc" />
+            <TextView
+                android:text="@string/stress"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:id="@+id/stress_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moderado"
+                android:textSize="20sp"
+                android:textColor="#BB9F25"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </GridLayout>
+</RelativeLayout>

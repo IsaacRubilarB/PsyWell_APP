@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#1A3D5D">
+
+    <!-- Logo de la aplicación -->
+    <ImageView
+        android:id="@+id/loginLogo"
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:contentDescription="@string/logo_description" />
+
+    <!-- Campo de Correo Electrónico -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F7FAFA"
+        android:importantForAccessibility="yes"
+        android:autofillHints="emailAddress"/>
+
+    <!-- Campo de Contraseña -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FCFFFF"
+        android:importantForAccessibility="yes"
+        android:autofillHints="password"/>
+
+    <!-- Botón de Ingresar -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:importantForAccessibility="yes"/>
+
+    <!-- Botón de Iniciar sesión con Google -->
+    <Button
+        android:id="@+id/googleLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google_login_button"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFC107"
+        android:textColor="#000000"
+        android:importantForAccessibility="yes"/>
+
+    <!-- Link para cambiar a la vista de Registro -->
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_link"
+        android:textColor="#F1F3F4"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+</LinearLayout>

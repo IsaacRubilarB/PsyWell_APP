@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A3D5D"
+    android:padding="16dp">
+
+    <!-- Encabezado con logo y botón de ajustes -->
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#083d5d">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Información del perfil -->
+    <LinearLayout
+        android:id="@+id/profile_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/header_container"
+        android:background="#bb9f25"
+        android:padding="15dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/profile_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/perfil"
+            android:contentDescription="@string/avatar_content_desc"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circle_background" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cristina Ormazábal"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/profile_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depresión"
+            android:textSize="16sp"
+            android:textColor="#f9f9f9"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/profile_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29 años"
+            android:textSize="16sp"
+            android:textColor="#f9f9f9"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/edit_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDITAR PERFIL"
+            android:backgroundTint="#bb9f25"
+            android:textColor="#0878c2"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Opciones de configuración -->
+    <LinearLayout
+        android:id="@+id/config_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/profile_info"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notificaciones"
+            android:drawableLeft="@drawable/notificacion"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#1A3D5D"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_sound_preferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferencias de Sonido"
+            android:drawableLeft="@drawable/sonido"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#1A3D5D"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Idioma y Tema"
+            android:drawableLeft="@drawable/traductor"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#1A3D5D"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacidad y Seguridad"
+            android:drawableLeft="@drawable/privacidad"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#0878c2"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acerca de la Aplicación"
+            android:drawableLeft="@drawable/info"
+            android:drawablePadding="10dp"
+            android:backgroundTint="#0878c2"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>

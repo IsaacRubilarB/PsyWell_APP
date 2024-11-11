@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PsyWell</string>
+
+    <!-- Opciones de género para el Spinner -->
+    <string-array name="genero_options">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <!-- Descripciones de contenido para accesibilidad -->
+    <string name="avatar_content_desc">Avatar del Paciente</string>
+    <string name="bpm_desc">Frecuencia Cardíaca (BPM)</string>
+    <string name="sleep_desc">Horas de Sueño</string>
+    <string name="water_desc">Vasos de Agua</string>
+    <string name="stress_desc">Nivel de Estrés</string>
+
+    <!-- Títulos y etiquetas en el layout -->
+    <string name="patient_name">Nombre del Paciente</string>
+    <string name="patient_email">Correo del Paciente</string>
+    <string name="section_title_citas">Próximas Citas</string>
+    <string name="section_title_data">Datos Fisiológicos</string>
+
+    <!-- Etiquetas para datos fisiológicos -->
+    <string name="bpm">BPM</string>
+    <string name="sleep_hours">Horas de Sueño</string>
+    <string name="water_glasses">Vasos de Agua</string>
+    <string name="stress">Estrés</string>
+
+    <!-- Textos para la pantalla de login -->
+    <string name="login_button">Ingresar</string>
+    <string name="google_login_button">Iniciar sesión con Google</string>
+    <string name="email_hint">Correo Electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="register_link">Registrar</string>
+    <string name="logo_description">Logo de PsyWell</string>
+
+</resources>
